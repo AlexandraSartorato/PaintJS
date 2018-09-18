@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Paint</title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="row">
+        <div class ="col s3 amber" id="sidebar">
+            <h1>My Paint <i class="fab fa-firstdraft"></i></h1>
+            <input type="range" id="stroke_size" min="1" max="10" value="10" onchange="changeSize();">
+            <input type="color" id="color" onchange="changeColor();">
+            <div><a href=""class="waves-effect waves-light btn-small" id="save" download="canvas.png" ><i class="far fa-save"></i></a></div>
+            <div><button class="waves-effect waves-light btn-small" id="pencil"><i class="fas fa-pencil-alt"></i></button></div>
+            <div><button class="waves-effect waves-light btn-small" onclick="erase();" ><i class="fas fa-eraser"></i></button></div>
+            <div><button class="waves-effect waves-light btn-small" id="rectangle" ><i class="far fa-square"></i></button></div>
+            <div><button class="waves-effect waves-light btn-small" id="rectanglefill" ><i class="fas fa-square"></i></button></div>
+            <div><button class="waves-effect waves-light btn-small" id="circle" ><i class="far fa-circle"></i></button></div>
+            <div><button class="waves-effect waves-light btn-small" id="circlefill" ><i class="fas fa-circle"></i></button></div>
+            <div><button class="waves-effect waves-light btn-small" id="line" ><i class="fas fa-pen-alt"></i></button></div>
+    </div>
+        <canvas id="my_canvas" width="500" height="500">
+        </canvas>
+    </div>
+
+    <image id="theimage"></image>
+</div>
+<script src="main.js"></script>
+<script>
+$(document).ready(function(){
+    $('select').formSelect();
+});
+</script>
+</body>
+</html>

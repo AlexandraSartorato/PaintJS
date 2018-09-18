@@ -1,1 +1,1 @@
-# PaintJS
+# MyPaint
